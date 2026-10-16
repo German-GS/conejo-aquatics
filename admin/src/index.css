@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --color-abyss-950: #041b22;
+  --color-abyss-900: #06232b;
+  --color-ocean-800: #0a3b4a;
+  --color-ocean-700: #0e5c6b;
+  --color-ocean-600: #117a8c;
+  --color-turquoise-500: #14b8a6;
+  --color-turquoise-400: #2dd4bf;
+  --color-turquoise-300: #5eead4;
+  --color-seafoam-500: #10b981;
+  --color-seafoam-400: #34d399;
+  --color-mist-50: #f6fbfa;
+  --color-mist-100: #eaf6f4;
+  --color-slate-750: #2b3944;
+}
+
+@theme inline {
+  --color-abyss-950: var(--color-abyss-950);
+  --color-abyss-900: var(--color-abyss-900);
+  --color-ocean-800: var(--color-ocean-800);
+  --color-ocean-700: var(--color-ocean-700);
+  --color-ocean-600: var(--color-ocean-600);
+  --color-turquoise-500: var(--color-turquoise-500);
+  --color-turquoise-400: var(--color-turquoise-400);
+  --color-turquoise-300: var(--color-turquoise-300);
+  --color-seafoam-500: var(--color-seafoam-500);
+  --color-seafoam-400: var(--color-seafoam-400);
+  --color-mist-50: var(--color-mist-50);
+  --color-mist-100: var(--color-mist-100);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-mist-50);
+  color: var(--color-abyss-900);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-460px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -30px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.05));
+  animation: rise linear infinite;
+}

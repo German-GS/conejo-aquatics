@@ -1,0 +1,41 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno (nunca se comitea la contraseña real)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Next.js (web)
+web/.next/
+web/out/
+
+# Vite (admin)
+admin/dist/
+
+# NestJS (backend)
+backend/dist/
+
+# Fotos subidas de inventario (archivos reales, no van al repo)
+backend/uploads/inventario/*
+!backend/uploads/inventario/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Documentos internos del negocio (no se publican)
+DISENO_CONEJO_AQUATICS.docx
+DISENO_CONEJO_AQUATICS.md
+
+# Configuración local de Claude Code
+.claude/
